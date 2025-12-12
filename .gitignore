@@ -53,6 +53,6 @@ backend/local_settings.py
 htmlcov/
 .pytest_cache/
 
-# md files
+# Ignore specific markdown files
 ENVIRONMENT_SETUP.md
 QUICK_START.md
