@@ -1,0 +1,25 @@
+{
+  "name": "personal-finance-manager",
+  "version": "1.0.0",
+  "description": "Personal Finance Manager - Full Stack Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"FRONTEND,BACKEND\" -c \"blue,green\" \"yarn dev:frontend\" \"yarn dev:backend\"",
+    "dev:frontend": "cd frontend && yarn dev",
+    "dev:backend": "node scripts/run-backend.js",
+    "build": "cd frontend && yarn build",
+    "start": "concurrently -n \"FRONTEND,BACKEND\" -c \"blue,green\" \"yarn start:frontend\" \"yarn start:backend\"",
+    "start:frontend": "cd frontend && yarn start",
+    "start:backend": "node scripts/run-backend.js",
+    "install:all": "yarn install && cd frontend && yarn install",
+    "setup:backend": "cd backend && python3 -m venv venv && ./venv/bin/pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  }
+}
+
